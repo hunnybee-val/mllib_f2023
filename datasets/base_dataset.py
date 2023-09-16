@@ -1,5 +1,7 @@
 import numpy as np
 from abc import ABC, abstractmethod
+import pandas as pd
+from configs.linear_regression_dataset import cfg  
 
 
 class BaseDataset(ABC):
@@ -24,4 +26,7 @@ class BaseDataset(ABC):
     def _divide_into_sets(self):
         # TODO define self.inputs_train, self.targets_train, self.inputs_valid, self.targets_valid,
         #  self.inputs_test, self.targets_test
-        pass
+        df = pd.read_csv()
+        columns = ['inputs','targets']
+        df = df.loc[:, columns]
+         pass
